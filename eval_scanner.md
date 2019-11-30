@@ -7,38 +7,41 @@ Two vulnerability scanners that I will be evaluating are Nexpose by Rapid7 and O
 
 **Nexpose**
 
-Nexpose is made by Rapid7, the same company that created the Metasploit. It is a vulnerability scanner which aims to support the whole vulnerability management lifecycle including impact analysis, reporting and remediation of risks. It is sold as standalone software, an appliance, virtual machine, or as a managed service or private cloud deployment. Nexpose has a 30-day free trial. After that, there is a yearly fee starting around $2000.
+Nexpose is made by Rapid7, the same company that created the Metasploit. It is a vulnerability scanner which aims to support the whole vulnerability management lifecycle including impact analysis, reporting and remediation of risks. It is sold as standalone software, a virtual machine, or private cloud deployment. Nexpose has a 30-day free trial. After that, there is a yearly fee starting around $2000.
 
 **OpenVAS**
 
-OpenVas is a free vulnerability scanner that was forked out from the last free version of another vulnerability scanner called Nessus which went private in 2005. Plugins of OpenVAS are still written in the Nessus NASL language.
-
+OpenVas is a free and open-source vulnerability scanner that was forked out from the last free version of another vulnerability scanner called Nessus which went private in 2005. Plugins of OpenVAS are still written in the Nessus NASL language.
 
 ## Installation
+
+**Nexpose**
+
+Nexpose installation and setup is slightly complicated. It requires registration and download directly from Rapid7's website.
+
+    chmod u+x ./Rapid7xxx.bin
+    ./Rapid7xxx.bin
+
+After running the Rapid7xxx.bin installer, then another hour of setup and activation before presented with the web interface: https://localhost:3780.
+
+    service postgresql stop
+    cd /opt/rapid7/nexpose/nsc
+    ./nsc.sh
+
+**OpenVAS**
+
+Installation of OpenVAS on an Ubuntu Linux is quick and easy with the command line:
+
+    sudo apt install openvas
+
+Then a web interface is provided at https://127.0.0.1:9392/
+
 
 ## Comparison
 
 ## Notes
-openvas installation
-sudo apt
-easy to install and setup
-https://127.0.0.1:9392/
 
-open source
+Installation and setup of Nexpose were not as simple as OpenVAS. It requires more resources to install, RAM and storage. It is also dependent on Java Runtime Environment. It is quite buggy and breaks easily. I had to install it 4 or 5 times after running a scan.
 
-nexpose installation
-
-30 day free trial
-
-download installation bin file from Rapid7
-
-sudo systemctl start nexposeconsole.service
-
-https://localhost:3780
-
-service postgresql stop
-
-Installation / setup were not as simple as openvas. It requires more resources to install, RAM and storage. It is also dependent on JRE. It is quite buggy and breaks easily. I had to install it 4 or 5 times after running a scan.
-
-activation key is needed. Activation takes about 15 minutes. The whole installation setup and activation takes about 1 hour.
+Nexpose activation key is needed. Activation takes about 15 minutes. The whole installation setup and activation takes about 1 hour.
 
