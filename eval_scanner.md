@@ -5,7 +5,14 @@ There are thousands of known security holes in networks, systems and application
 
 Two vulnerability scanners that I will be evaluating are Nexpose by Rapid7 and OpenVAS. Both will scan the same system with the Metasploitable virtual machine, an intentionally vulnerable Linux system.
 
-Nexpose is made by Rapid7, the same company that created
+**Nexpose**
+
+Nexpose is made by Rapid7, the same company that created the Metasploit. It is a vulnerability scanner which aims to support the whole vulnerability management lifecycle including impact analysis, reporting and remediation of risks. It is sold as standalone software, an appliance, virtual machine, or as a managed service or private cloud deployment. Nexpose has a 30-day free trial. After that, there is a yearly fee starting around $2000.
+
+**OpenVAS**
+
+OpenVas is a free vulnerability scanner that was forked out from the last free version of another vulnerability scanner called Nessus which went private in 2005. Plugins of OpenVAS are still written in the Nessus NASL language.
+
 
 ## Installation
 
