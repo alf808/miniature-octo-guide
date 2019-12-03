@@ -39,6 +39,22 @@ Then a web interface is provided at https://127.0.0.1:9392/
 
 ## Comparison
 
+Features | **OpenVAS** | **Nexpose**
+---------|-------------|------------
+vulnerabilities found: | 396 | 287
+
+Both have many templates for reporting.
+
+Results are organized by severity.
+
+In OpenVAS, for each vulnerability, a summary, version, impact, solution, affected software/OS, vulnerability insight, vulnerability detection method, product detection result, and references.
+
+![sample openvas vulnerability](sampleopenvasvuln.png)
+
+Nexpose has similar output.
+
+![sample nexpose vulnerability](samplenexposevuln.png)
+
 ## Notes
 
 Installation and setup of Nexpose were not as simple as OpenVAS. It requires more resources to install, RAM and storage. It is also dependent on Java Runtime Environment. It is quite buggy and breaks easily. I had to install it 4 or 5 times after running a scan.
